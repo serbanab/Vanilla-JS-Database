@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanilla-JS-Database</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="/index.css">
+</head>
+
+<body class="d-flex flex-column justify-content-between" >
+    
+<nav class="navbar navbar-dark navbar-expand-lg  bg-dark "  >
+    <div class="container-fluid" >
+        <a href="#" class="navbar-brand text-white" > AdminPanel</a>
+        <button  class="navbar-toggler "  data-bs-toggle="collapse"  data-bs-target="#col" >
+            <span class="navbar-toggler-icon" ></span>
+        </button>
+        <div class="collapse navbar-collapse" id="col"  >
+            <ul class="navbar-nav me-3" id="ul-main" >
+               <li class="nav-item text-white" >
+                   <a href="#" class="nav-link" >Data</a>
+               </li>
+               <li class="nav-item text-white" >
+                   <a href="#" class="nav-link " >Data</a>
+               </li>
+               <li class="nav-item dropdown" >
+                   <a href="#" class="dropdown-toggle nav-link "  data-bs-toggle="dropdown" >Data</a>
+                   <ul class="dropdown-menu" >
+                       <li class="dropdown-item" >
+                           <a href="#" class="nav-link text-dark " >Data</a>
+                       </li>
+                       <li class="dropdown-item" >
+                           <a href="#" class="nav-link text-dark " >Data 1</a>
+                       </li>
+                       <li class="dropdown-divider" ></li>
+                       <li class="dropdown-item" >
+                           <a href="#" class="nav-link text-dark " >Data 2</a>
+                       </li>
+                       <li class="dropdown-item" class="nav-link" >
+                           <a href="#" class="nav-link text-dark " >Data 3</a>
+                       </li>
+                   </ul>
+               </li>
+               <li class="nav-item text-white"  >
+                   <a href="#" class="nav-link mb-2 mb-lg-0 " >Data</a>
+               </li>
+            </ul>
+            
+            <form  class="d-flex w-100" >
+                <input type="text" class="form-control me-3 bg-dark rounded-0  text-white "   >
+                <button class="btn btn-outline-info " id="btn-search"  >Search</button>
+            </form>
+            
+        </div>
+    </div>
+</nav>
+<main>
+    <section>
+    <div class="container-fluid  my-5 " >
+        <div  class="d-flex justify-content-between " >
+            <h1>Data Table :</h1>
+            <div>
+                <button class="btn btn-primary" >Share</button>
+                <button class="btn btn-success" >Export</button>
+            </div>
+        </div>
+    <table class="table" >
+        <thead>
+            <tr>
+            <th>#</th>
+            <th>Departament</th>
+            <th>Nume</th>
+            <th>Proiect</th>
+            <th>Status Executie</th>
+            </tr>
+        </thead>
+
+        <tbody id="tb" >
+            <tr>
+                <th>2  <i class="bi bi-pencil ms-3 text-success d-none "></i> </th>
+                <td>Departament2  <i class="bi bi-pencil ms-3 text-success d-none "></i></td>
+                <td>Ion  <i class="bi bi-pencil ms-3 text-success d-none "></i></td>
+                <td>Proiect2  <i class="bi bi-pencil ms-3 text-success d-none "></i></td>
+                <td>Status2  <i class="bi bi-pencil ms-3 text-success d-none "></i> </td>
+                <td><i class="bi bi-x-lg text-danger "></i></td>
+               
+            </tr>
+
+            <tr>
+                <th>2  <i class="bi bi-pencil ms-3 text-success d-none "></i></th>
+                <td>Departament2  <i class="bi bi-pencil ms-3 text-success d-none "></i></td>
+                <td>Ion  <i class="bi bi-pencil ms-3 text-success d-none "></i></td>
+                <td>Proiect2  <i class="bi bi-pencil ms-3 text-success d-none "></i></td>
+                <td>Status2 <i class="bi bi-pencil ms-3 text-success d-none "></i> </td>
+                <td><i class="bi bi-x-lg text-danger "></i></td>
+               
+            </tr>
+
+            <tr>
+                <th>3  <i class="bi bi-pencil ms-3 text-success d-none "></i></th>
+                <td>Departament3  <i class="bi bi-pencil ms-3 text-success d-none "></i></td>
+                <td>Andrei  <i class="bi bi-pencil ms-3 text-success d-none "></i></td>
+                <td>Proiect3  <i class="bi bi-pencil ms-3 text-success d-none "></i></td>
+                <td>Status3 <i class="bi bi-pencil ms-3 text-success d-none "></i> </td>
+                <td><i class="bi bi-x-lg text-danger "></i></td>
+            </tr>
+
+            <tr>
+                <th>4  <i class="bi bi-pencil ms-3 text-success d-none "></i></th>
+                <td>Departament4  <i class="bi bi-pencil ms-3 text-success d-none "></i></td>
+                <td>Costin  <i class="bi bi-pencil ms-3 text-success d-none "></i></td>
+                <td>Proiect4  <i class="bi bi-pencil ms-3 text-success d-none "></i></td>
+                <td>Status4 <i class="bi bi-pencil ms-3 text-success d-none "></i> </td>
+                <td><i class="bi bi-x-lg text-danger "></i></td>
+            </tr>
+
+            <tr>
+                <th>5  <i class="bi bi-pencil ms-3 text-success d-none "></i></th>
+                <td>Departament5  <i class="bi bi-pencil ms-3 text-success d-none "></i></td>
+                <td>Maria  <i class="bi bi-pencil ms-3 text-success d-none "></i></td>
+                <td>Proiect5  <i class="bi bi-pencil ms-3 text-success d-none  "></i></td>
+                <td>Status5 <i class="bi bi-pencil ms-3 text-success d-none "></i> </td>
+                <td><i class="bi bi-x-lg text-danger "></i></td>
+            </tr>
+
+            <tr>
+                <th>6  <i class="bi bi-pencil ms-3 text-success d-none "></i></th>
+                <td>Departament6  <i class="bi bi-pencil ms-3 text-success d-none "></i></td>
+                <td>Elena  <i class="bi bi-pencil ms-3 text-success d-none "></i></td>
+                <td>Proiect6  <i class="bi bi-pencil ms-3 text-success d-none "></i></td>
+                <td>Status6 <i class="bi bi-pencil ms-3 text-success d-none "></i>  </td>
+                <td><i class="bi bi-x-lg  text-danger "></i></td>
+            </tr>
+
+            <tr>
+                <th>7  <i class="bi bi-pencil ms-3 text-success d-none "></i></th>
+                <td>Procurmen  <i class="bi bi-pencil ms-3 text-success d-none "></i></td>
+                <td>Sorin  <i class="bi bi-pencil ms-3 text-success d-none "></i></td>
+                <td>Achizitie Pc  <i class="bi bi-pencil ms-3 text-success d-none "></i></td>
+                <td>valoare 500 status finalizat 5.08.2022 <i class="bi bi-pencil ms-3 text-success d-none "></i>  </td>
+                <td><i class="bi bi-x-lg text-danger "></i></td>
+            </tr>
+
+            <tr>
+                <th>8 <i class="bi bi-pencil ms-3 text-success d-none "></i></th>
+                <td>Departament8  <i class="bi bi-pencil ms-3 text-success d-none "></i></td>
+                <td>Bianca  <i class="bi bi-pencil ms-3 text-success d-none "></i></td>
+                <td>Proiect8  <i class="bi bi-pencil ms-3 text-success d-none "></i></td>
+                <td>Status8  <i class="bi bi-pencil ms-3 text-success d-none "></i> </td>
+                <td><i class="bi bi-x-lg text-danger "></i></td>
+            </tr>
+
+        </tbody>
+
+    </table>
+   
+    <div>
+        <button class="btn btn-secondary d-none " id="btn-back" >Cancel Edit</button>
+        <button class="btn btn-danger" id="btn-edit" >Edit Content</button>
+        <button class="btn btn-warning d-none " id="btn-delete" >Delete All</button>
+    </div>
+    
+    </div>
+</section>
+
+<section>
+<div class="container-fluid mb-5 d-none "  id="section-add">
+    <h2>Add to Table</h2>
+<form action=""  class="row" >
+    <div class="col-6" >
+        <label for="" class="form-label" >Departament</label>
+        <input type="text" class="form-control" placeholder="Departament" id="input-departament" >
+    </div>
+    <div class="col-6" >
+        <label for="" class="form-label" >Nume</label>
+        <input type="text" class="form-control" placeholder="Nume" id="input-nume" >
+    </div>
+
+    <div class="col-6  mt-5 " >
+        <label for="" class="form-label"  >Proiect</label>
+        <input type="text" class="form-control" placeholder="Proiect" id="input-proiect" >
+    </div>
+
+    <div class="col-6 mt-5  " >
+        <label for="" class="form-label" >Status Executie</label>
+        <input type="text" class="form-control" placeholder="Status Executie" id="input-status"  >
+    </div>
+
+    <div>
+        <button class="btn btn-secondary mt-3" id="btn-add" >Add Row</button>
+    </div>
+
+</form>
+</div>
+
+</section>
+
+</main>
+
+
+<footer class="fotter bg-dark p-2 text-center " >
+<h2 class = "text-white" >AdminPanel</h2>  
+<h6 class="text-white mb-0 mt-1 " >Toate drepturile rezervate ©2022</h6>
+</footer>
+
+<script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/index.js"></script>
+</body>
+</html>
